@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -15,5 +11,21 @@
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-  margin-top 60px
+*
+  margin 0
+  padding 0
+body
+  min-width 1470px
+  a
+    color inherit
+  .el-button--primary
+    &:focus
+      color: #FFF;
+      background-color: #409EFF;
+      border-color: #409EFF;
+    &:hover
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #FFF;
+    
 </style>
