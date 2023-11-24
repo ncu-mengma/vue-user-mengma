@@ -59,7 +59,7 @@ export function validRegisterAccount(params) {
 }
 export function validRegisterMail(params) {
   return request({
-    url: '/user/validRegisterAccount',
+    url: '/user/validRegisterMail',
     method: 'get',
     params
   })
