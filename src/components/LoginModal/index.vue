@@ -149,10 +149,10 @@ export default {
             this.$store.commit('user/SET_SHOWLOGIN', false)
         },
         loginSubmit() {
-            this.$store.dispatch("user/login", this.loginForm).catch((msg) => {
-                this.$message.error(msg)
-            }).then(() => {
+            this.$store.dispatch("user/login", this.loginForm).then(() => {
                 this.$message.success('登录成功！')
+            }).catch((msg) => {
+                this.$message.error(msg)
             })
             this.close()
         },

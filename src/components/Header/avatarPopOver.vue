@@ -1,9 +1,11 @@
 <template>
     <div class="avatar">
-        <div class="item hvr-sink hvr-grow">
-            <a-avatar size="large" :src="avatar">
-                <span v-if="!account">登录</span>
-                <a-icon slot="icon" type="user" v-else-if="!avatar" />
+        <div class="item">
+            <a-avatar v-if="!account" size="large">
+                <span>登录</span>
+            </a-avatar>
+            <a-avatar class="sink hvr-grow" size="large" :src="avatar" v-if="account">
+                <a-icon slot="icon" type="user" />
             </a-avatar>
         </div>
         <div class="popover">
@@ -58,7 +60,7 @@ export default {
     .item
         cursor pointer
     &:hover
-        .item
+        .sink
             transform: translateY(30px) scale(1.3) !important;
             z-index 100
         .popover
@@ -66,7 +68,7 @@ export default {
 
     .popover
         cursor default
-        display block
+        display none
         position absolute
         top 100%
         left 50%
